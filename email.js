@@ -1,11 +1,28 @@
 function emails(email){
 
-    const thakle = email.include()
-    console.log(thakle)
-    /* if(thakle){
-        return "true"
+    const thakle = email.includes("@")
+    const notCom = email.includes('.com')
+    const others = !email.includes("- ; , . + _ ");
+   
+ if(notCom && thakle && others){
+        if(thakle){
+            return thakle
+        }
+        if(notCom){
+            return notCom
+        }
+        
     }else{
-        return" false "   } */
+        if(!thakle){
+            return thakle
+        }
+        if(!notCom){
+            return notCom
+        }
+        if(others){
+            return !others
+        }
+    }
    
 }
 
