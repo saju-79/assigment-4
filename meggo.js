@@ -4,7 +4,7 @@
     const element = foods[i];
     let food = element
     if(element.length > food.length){
-        food = element
+        food = element 
         break
     }
     

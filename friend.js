@@ -1,22 +1,23 @@
-const friend1 ={name:"saju ahmed" , rool:1 ,bestFriendNumber:2 }
-const friend2 ={name:"mubin tahmed " , rool:2 ,bestFriendNumber:1 }
-function bestFriend(a ,b){
-    
-        if(a.rool === b.bestFriendNumber && a.bestFriendNumber === b.rool){
-           return"asi"
-        }else{
-            return"naiii"
-        }
-    
 
+const a = { name: "saju", roll: 1, bestFriend: 2 };
+const b = { name: "mubin", roll: 2, bestFriend: 1 };
+
+function bestFriend(friend1 , friend2){
+    if(typeof friend1 === "string" || typeof friend2 ==="string"){
+        return "Invalid";
     }
-          
-        
-    
- 
+    if(typeof friend1.roll !== "number" || typeof friend1.bestFriend !== "number" ||
+         typeof friend2.roll !== "number" || typeof friend2.bestFriend !== "number"){
+        return "Invalid";
+    }
 
+    if(friend1.roll === friend2.bestFriend && friend2.roll === friend1.bestFriend){
+       return true;
+    }
+    else{
+        return false ;
+    }
+}
 
- 
-const outpu = bestFriend(friend1 , friend2)
-console.log(outpu)
-
+const output = bestFriend(a , b);
+console.log(output)
